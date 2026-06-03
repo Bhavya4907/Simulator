@@ -16,6 +16,6 @@ export async function getMessages(id: string) {
 }
 
 export async function sendMessage(id: string, content: string) {
-  const res = await api.post(`/chat/chat/${id}`, { content });
+  const res = await api.post(`/chat/chat/${id}`, { message: content });
   return res.data;
 }
