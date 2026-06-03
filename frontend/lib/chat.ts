@@ -5,17 +5,17 @@ export async function generateCharacter() {
   return res.data;
 }
 
-export async function getCharacter(characterId: string) {
-  const res = await api.get(`/characters/character/${characterId}`);
+export async function getCharacter(id: string) {
+  const res = await api.get(`/characters/character/${id}`);
   return res.data;
 }
 
-export async function getMessages(characterId: string) {
-  const res = await api.get(`/characters/messages/${characterId}`);
+export async function getMessages(id: string) {
+  const res = await api.get(`/characters/messages/${id}`);
   return res.data;
 }
 
-export async function sendMessage(characterId: string, message: string) {
-  const res = await api.post(`/chat/chat/${characterId}`, { message });
+export async function sendMessage(id: string, content: string) {
+  const res = await api.post(`/chat/chat/${id}`, { content });
   return res.data;
 }
